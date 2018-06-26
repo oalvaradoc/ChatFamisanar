@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://americasapp.americasbps.com/WSCorreo/ServicioCorreo.asmx?WSDL" uri="src/conf/xml-resources/web-services/EnvioCorreos/wsdl/americasapp.americasbps.com/WSCorreo/ServicioCorreo.asmx.wsdl"/>
+    <system systemId="http://172.27.48.69/WS_Faminanar/WSContacto.svc?wsdl" uri="src/conf/xml-resources/web-services/obtenerContacto/wsdl/172.27.48.69/WS_Faminanar/WSContacto.svc.wsdl"/>
+    <system systemId="http://172.27.48.69/WS_Faminanar/WSContacto.svc?xsd=xsd0" uri="src/conf/xml-resources/web-services/obtenerContacto/wsdl/172.27.48.69/WS_Faminanar/WSContacto.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://172.27.48.69/WS_Faminanar/WSContacto.svc?xsd=xsd1" uri="src/conf/xml-resources/web-services/obtenerContacto/wsdl/172.27.48.69/WS_Faminanar/WSContacto.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://172.27.48.69/WS_Faminanar/WSContacto.svc?xsd=xsd2" uri="src/conf/xml-resources/web-services/obtenerContacto/wsdl/172.27.48.69/WS_Faminanar/WSContacto.svc.xsd_xsd2.xsd"/>
+    <system systemId="http://serverweb1.dmasterdorado.net/WS_Famisanar/WSContacto.svc?wsdl" uri="src/conf/xml-resources/web-services/obtenerContacto/wsdl/serverweb1.dmasterdorado.net/WS_Famisanar/WSContacto.svc.wsdl"/>
+    <system systemId="http://serverweb1.dmasterdorado.net/WS_Famisanar/WSContacto.svc?xsd=xsd0" uri="src/conf/xml-resources/web-services/obtenerContacto/wsdl/serverweb1.dmasterdorado.net/WS_Famisanar/WSContacto.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://serverweb1.dmasterdorado.net/WS_Famisanar/WSContacto.svc?xsd=xsd1" uri="src/conf/xml-resources/web-services/obtenerContacto/wsdl/serverweb1.dmasterdorado.net/WS_Famisanar/WSContacto.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://serverweb1.dmasterdorado.net/WS_Famisanar/WSContacto.svc?xsd=xsd2" uri="src/conf/xml-resources/web-services/obtenerContacto/wsdl/serverweb1.dmasterdorado.net/WS_Famisanar/WSContacto.svc.xsd_xsd2.xsd"/>
+    <system systemId="http://serverweb1.dmasterdorado.net/WS_Famisanar/WSContacto.svc?xsd=xsd3" uri="src/conf/xml-resources/web-services/obtenerContacto/wsdl/serverweb1.dmasterdorado.net/WS_Famisanar/WSContacto.svc.xsd_xsd3.xsd"/>
+</catalog>

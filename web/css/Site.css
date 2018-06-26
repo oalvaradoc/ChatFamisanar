@@ -1,0 +1,173 @@
+/*﻿@font-face {
+	font-family: SourceSansPro-Bold;
+	src: url('../../../../../../../Downloads/source-sans-pro/SourceSansPro-Bold.otf') format('opentype');
+}*/
+
+@font-face {
+	font-family: Futura Bold;
+	src: url('../../../../../../../Downloads/Futura Bold/Futura Bold.otf') format('opentype');
+}
+
+textarea#motivo {
+    min-height: 50px;
+}
+
+.modal-info p {
+  text-align: justify !important;
+}
+
+.color-agree {
+    background-color: #064386 !important;
+    color: white !important;
+}
+
+/*@media (max-width: 540px){
+    .swal-style {
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+        left: 15px;
+        right: 15px;
+        overflow-y: auto !important;
+        margin-left: -19% !important;
+        margin-top: auto;
+        width: 75% !important; 
+    }
+}*/
+
+.sa-button-container {
+    text-align: center !important;
+}
+
+ .loading-div {
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    -moz-opacity: 0.8;
+    display: none;
+    left:0;
+}
+.center {
+    z-index: 1000;
+    margin: 50px auto;
+    padding: 10px;
+    width: 130px;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -moz-opacity: 1;
+    top: 50%;
+    left: 50%;
+    margin-top: -90px;
+    margin-left: -80px;
+    position: fixed;
+}
+.sa-icon.sa-custom {
+    width: 300px !important;
+    height: 100px !important;
+}
+
+.backdrop {
+    background-color: rgb(6, 67, 134);
+}
+.p-object-radio{
+    float:left;
+    margin-right:10px;
+    margin-top: 0px;
+}
+
+.encabezadoapp {
+    background: rgb(6, 67, 134);
+    min-height: 50px;
+    height:80.4px;
+}
+
+
+.font-headerApp {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 18.2%;
+    padding-top: 1.5%;
+    /*font-family: 'Futura Bold';*/
+    /*font-family: 'SourceSansPro-Bold';*/
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.footer-app {
+    padding: 30px;
+    /*margin-bottom: 20px;*/
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: normal;
+    color: #5e5b68;
+    background-color: #d2d0d0;
+}
+
+.footer-app p {
+    margin: 0 0 10px;
+}
+
+.mt15 {
+    margin-top:15px !important;
+}
+
+.Imagen-cabecera-style {
+    margin-left: 26%;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+div p {
+    text-align: center;
+    line-height: 1.42857143;
+}
+
+.start-session-btn{
+    width:100% !important;
+}
+
+.start-session-senas {
+    width: 100% !important;
+    background-color:dodgerblue;
+}
+
+.start-session-senas:hover {
+    background-color: dodgerblue !important;
+}
+
+.start-session-senas:focus {
+    background-color: dodgerblue !important;
+}
+
+.start-session-btn:hover {
+    background-color: #064386 !important;
+}
+
+.start-session-btn:focus {
+    background-color: #064386 !important;
+}
+
+.start-session-Chat:hover {
+    background-color: #064386 !important;
+}
+
+.start-session-Chat:focus {
+    background-color: #064386 !important;
+}
+
+
+
+
+

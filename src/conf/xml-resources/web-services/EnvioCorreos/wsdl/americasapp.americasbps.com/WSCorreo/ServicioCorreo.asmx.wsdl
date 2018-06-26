@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Enviar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="De" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CCO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Asunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EnviarSoapIn">
+    <wsdl:part name="parameters" element="tns:Enviar" />
+  </wsdl:message>
+  <wsdl:message name="EnviarSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarHttpGetIn">
+    <wsdl:part name="De" type="s:string" />
+    <wsdl:part name="Para" type="s:string" />
+    <wsdl:part name="CC" type="s:string" />
+    <wsdl:part name="CCO" type="s:string" />
+    <wsdl:part name="Asunto" type="s:string" />
+    <wsdl:part name="Mensaje" type="s:string" />
+    <wsdl:part name="Id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EnviarHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EnviarHttpPostIn">
+    <wsdl:part name="De" type="s:string" />
+    <wsdl:part name="Para" type="s:string" />
+    <wsdl:part name="CC" type="s:string" />
+    <wsdl:part name="CCO" type="s:string" />
+    <wsdl:part name="Asunto" type="s:string" />
+    <wsdl:part name="Mensaje" type="s:string" />
+    <wsdl:part name="Id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EnviarHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="ServicioCorreoSoap">
+    <wsdl:operation name="Enviar">
+      <wsdl:input message="tns:EnviarSoapIn" />
+      <wsdl:output message="tns:EnviarSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServicioCorreoHttpGet">
+    <wsdl:operation name="Enviar">
+      <wsdl:input message="tns:EnviarHttpGetIn" />
+      <wsdl:output message="tns:EnviarHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServicioCorreoHttpPost">
+    <wsdl:operation name="Enviar">
+      <wsdl:input message="tns:EnviarHttpPostIn" />
+      <wsdl:output message="tns:EnviarHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicioCorreoSoap" type="tns:ServicioCorreoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Enviar">
+      <soap:operation soapAction="http://tempuri.org/Enviar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicioCorreoSoap12" type="tns:ServicioCorreoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Enviar">
+      <soap12:operation soapAction="http://tempuri.org/Enviar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicioCorreoHttpGet" type="tns:ServicioCorreoHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Enviar">
+      <http:operation location="/Enviar" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicioCorreoHttpPost" type="tns:ServicioCorreoHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Enviar">
+      <http:operation location="/Enviar" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioCorreo">
+    <wsdl:port name="ServicioCorreoSoap" binding="tns:ServicioCorreoSoap">
+      <soap:address location="http://americasapp.americasbps.com/WSCorreo/ServicioCorreo.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicioCorreoSoap12" binding="tns:ServicioCorreoSoap12">
+      <soap12:address location="http://americasapp.americasbps.com/WSCorreo/ServicioCorreo.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicioCorreoHttpGet" binding="tns:ServicioCorreoHttpGet">
+      <http:address location="http://americasapp.americasbps.com/WSCorreo/ServicioCorreo.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicioCorreoHttpPost" binding="tns:ServicioCorreoHttpPost">
+      <http:address location="http://americasapp.americasbps.com/WSCorreo/ServicioCorreo.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

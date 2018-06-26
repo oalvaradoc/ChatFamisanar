@@ -24,7 +24,7 @@
 
     <style>
         #logimg{
-            /*            border: black 1px dashed;*/
+            
             width: 100%;
         }
         #logosala{

@@ -308,7 +308,7 @@
                         {
                             console.log('eyy');
                             var porId = document.getElementById("cb_habeasEnvioCorreo").checked;
-                            alert(porId);
+                            //alert(porId);
                             if (porId) {
                                 console.log('si obligatorio');
                                 $("#correo").attr("required", "required");

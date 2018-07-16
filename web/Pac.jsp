@@ -389,6 +389,9 @@
         <script src="js/jquery-2.1.2.min.js" type="text/javascript"></script>
         <script src="js/materialize.min.js" type="text/javascript"></script>
         <script type="text/javascript">
+            //Desarrollador
+            //CC 1010200410
+            //Omar Alvarado Castillo
                                 var i = 0;
                                 function MostrarOtros()
                                 {
@@ -407,7 +410,7 @@
 
                                 function Validar()
                                 {
-                                    //Mensaje();
+                                    
                                     validaHorario();
                                     
                                     var validador = $("#Validador").val();
